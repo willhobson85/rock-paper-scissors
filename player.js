@@ -4,12 +4,17 @@ class Player {
     this.choice = player.choice;
   }
 
-  takeTurnClassic(choiceId) {
-    this.choice = choiceId
+  takeTurn(gameType) {
+    if (gameType === 'classic') {
+      var weapons = ['rock', 'paper', 'scissors'];
+      return weapons[Math.floor(math.random() * weapons.length)];
+    } else if (gameType === 'advanced') {
+      var weapons = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+      return weapons[Math.floor(math.random() * weapons.length)];
+    }
   }
 
-  takeTurnAdvanced(choiceId) {
-    this.choice = choiceId;
+  scoreCounter() {
+    this.score++;
   }
-
 };
