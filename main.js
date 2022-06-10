@@ -1,5 +1,5 @@
 // Global Variables
-
+var newRound = new Game();
 
 // Query Selectors
 var classicGameBox = document.querySelector('.classic-game');
