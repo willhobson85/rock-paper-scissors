@@ -9,20 +9,20 @@
   <body>
     <section class="player-section">
       <img class="player" id="player1" src="./assets/Dave_Bowman.jpeg" alt="Dave">
-      <h1 class="text" id="player1-wins">0 wins</h1>
+      <h2 class="text" id="player1-wins">0 wins</h2>
       <button class="change-game hidden" type="button" name="button">Change Game</button>
     </section>
     <section class="main-game">
-      <h2 class="text title">Rock, Paper, Scissors</h2>
+      <h1 class="text title">Rock, Paper, Scissors</h1>
       <h3 class="text chose-text hidden">Choose your weapon!</h3>
       <section class="game-types">
-        <section class="classic-game">
+        <section class="classic-game" id="classic">
           <h4 class="text">Classic</h4>
           <p class="text">Rules: Rock beats scissors.</p>
           <p class="text">Scissors beats paper.</p>
           <p class="text">Paper beats rock.</p>
         </section>
-        <section class="advanced-game">
+        <section class="advanced-game" id="advanced">
           <h4 class="text">Advanced</h4>
           <p class="text">Rules: It's very simple.</p>
           <p class="text">Scissors cuts paper.</p>
@@ -39,13 +39,13 @@
         </section>
       </section>
       <section class="fighter-choices hidden">
-        <img class="fighter" id ="rock" src="./assets/therock.jpeg" alt="The Rock">
-        <img class="fighter" id="paper" src="./assets/paper.jpeg" alt="Toilet Paper with arms and smiley face">
-        <img class="fighter" id="scissors" src="./assets/Cutman.webp" alt="Mega Man's Villain Cut Man">
+        <img class="fighter rock" id ="rock" src="./assets/therock.jpeg" alt="The Rock">
+        <img class="fighter paper" id="paper" src="./assets/paper.jpeg" alt="Toilet Paper with arms and smiley face">
+        <img class="fighter scissors" id="scissors" src="./assets/Cutman.webp" alt="Mega Man's Villain Cut Man">
       </section>
       <section class="advanced-fighters hidden">
-        <img class="fighter hidden" id="lizard" src="./assets/godzilla.jpeg" alt="Godzilla shooting energy beam into sky">
-        <img class="fighter hidden" id="spock" src="./assets/spock.webp" alt="Spock">
+        <img class="fighter lizard hidden" id="lizard" src="./assets/godzilla.jpeg" alt="Godzilla shooting energy beam into sky">
+        <img class="fighter spock hidden" id="spock" src="./assets/spock.webp" alt="Spock">
       </section>
       <section class="win-screen hidden">
         <p class="text win">person wins!</p>
@@ -54,7 +54,7 @@
     </section>
     <section class="computer-section">
       <img class="player" id="computer" src="./assets/HAL9000.svg" alt="HAL9000">
-      <h1 class="text" id="computer-wins">0 wins</h1>
+      <h2 class="text" id="computer-wins">0 wins</h2>
     </section>
   </body>
   <script type="text/javascript" src="player.js"></script>
