@@ -2,6 +2,7 @@
 var newRound = new Game();
 
 // Query Selectors
+var gameTypesClass = document.querySelector('.game-types');
 var classicGameBox = document.querySelector('.classic-game');
 var advancedGameBox = document.querySelector('.advanced-game');
 var fighterImageBox = document.querySelector('.fighter-choices');
@@ -16,9 +17,34 @@ var spockFighter = document.querySelector('#spock');
 var gameChange = document.querySelector('.change-game');
 
 // Event Listeners
-classicGameBox.addEventListener('click', startClassic);
-advancedGameBox.addEventListener('click', startAdvanced);
+gameTypesClass.addEventListener('click', startGame);
 gameChange.addEventListener('click', mainMenu);
+fighterImageBox.addEventListener("click", function(e){
+  if (e.target.classList.contains("rock")) {
+    newRound.playerChoice = "rock";
+    console.log(newRound.playerChoice, "player choice rock")
+    newRound.checkWinDraw(newRound.playerChoice, newRound.gameType);
+  }
+  if (e.target.classList.contains("paper")) {
+    newRound.playerChoice = "paper";
+    newRound.checkWinDraw(newRound.playerChoice, newRound.gameType);
+  }
+  if (e.target.classList.contains("scissors")) {
+    newRound.playerChoice = "scissors";
+    newRound.checkWinDraw(newRound.playerChoice, newRound.gameType);
+  }
+});
+advancedFighterImages.addEventListener("click", function(e){
+  if (e.target.classList.contains("lizard")) {
+    newRound.playerChoice = "lizard";
+    newRound.checkWinDraw(newRound.playerChoice, newRound.gameType);
+  }
+  if (e.target.classList.contains("spock")) {
+    newRound.playerChoice = "spock";
+    newRound.checkWinDraw(newRound.playerChoice, newRound.gameType);
+  }
+});
+
 
 // Functions
 
@@ -30,28 +56,28 @@ function hide(element) {
   element.classList.add('hidden');
 };
 
-function startClassic() {
+function startGame(event) {
   hide(titleText);
   hide(classicGameBox);
   hide(advancedGameBox);
   show(choseText);
   show(fighterImageBox);
   show(gameChange);
-}
-
-function startAdvanced() {
-  hide(titleText);
-  hide(classicGameBox);
-  hide(advancedGameBox);
-  show(choseText);
-  show(fighterImageBox);
-  show(advancedFighterImages);
-  show(lizardFighter);
-  show(spockFighter);
-  show(gameChange);
+  if (event.target.parentElement.id === "classic") {
+    newRound.gameType = "classic";
+    hide(advancedFighterImages);
+    hide(lizardFighter);
+    hide(spockFighter);
+  } else {
+    show(advancedFighterImages);
+    show(lizardFighter);
+    show(spockFighter);
+    newRound.gameType = "advanced";
+  }
 }
 
 function mainMenu() {
+  newRound.gameType = "classic";
   show(titleText);
   show(classicGameBox);
   show(advancedGameBox);
@@ -62,3 +88,12 @@ function mainMenu() {
   hide(spockFighter);
   hide(gameChange);
 }
+
+//
+// resultsScreen() {
+//
+// }
+//
+// resetGame() {
+//
+// }
