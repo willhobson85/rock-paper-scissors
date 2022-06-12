@@ -22,17 +22,17 @@ class Game {
       whoWins.innerText = `HAL9000 wins!`;
       computerScore.innerText = `${this.computer.score} WINS;`
       resultsScreen();
-      return console.log(randomChoice, "I\'m sorry, Dave. I can\'t let you do that.")
+      document.getElementById('audio-lose').play();
     } else if (this.computerChoice === this.playerChoice){
       whoWins.innerText = `This game is a draw!`;
       resultsScreen();
-      return console.log(randomChoice, "This game is a draw!")
+      document.getElementById('audio-draw').play();
     } else {
       this.human.scoreCounter();
       whoWins.innerText = `Dave opened the pod bay doors!`;
       playerScore.innerText = `${this.human.score} WINS`;
       resultsScreen();
-      return console.log(randomChoice, "Dave opened the pod bay doors!")
+      document.getElementById('audio-win').play();
     }
   }
 }

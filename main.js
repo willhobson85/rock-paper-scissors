@@ -88,7 +88,6 @@ function startGame() {
 };
 
 function humanChampionImage() {
-  // playerChampion.innerHTML = "";
   if (newRound.playerChoice === "rock") {
     playerChampion.innerHTML = '<img class="fighter rock" id ="rock" src="./assets/therock.jpeg" alt="The Rock">'
   } else if (newRound.playerChoice === "paper") {
@@ -103,7 +102,6 @@ function humanChampionImage() {
 };
 
 function computerChampionImage() {
-  // computerChampion.innerHTML = "";
   if (newRound.computerChoice === "rock") {
     computerChampion.innerHTML = '<img class="fighter rock" id ="rock" src="./assets/therock.jpeg" alt="The Rock">'
   } else if (newRound.computerChoice === "paper") {
