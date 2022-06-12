@@ -76,7 +76,6 @@ h1, h3, .win, .winner {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 2px solid white;
   border-radius: 6px;
 }
 
@@ -111,8 +110,6 @@ h1, h3, .win, .winner {
 .fighter {
   width: 181px;
 }
-
-
 
 .text {
   color: white;
