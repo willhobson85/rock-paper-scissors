@@ -57,6 +57,10 @@ h1, h3, .win, .winner {
   border-radius: 6px;
 }
 
+.hover {
+  cursor: pointer;
+}
+
 .fighter-choices, .advanced-fighters {
   width: 80%;
   display: flex;
