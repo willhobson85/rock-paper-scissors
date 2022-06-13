@@ -40,6 +40,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  opacity: 0.75;
 }
 
 h1, h3, .win, .winner {
@@ -49,16 +50,27 @@ h1, h3, .win, .winner {
 .classic-game {
   border: 2px solid white;
   border-radius: 6px;
+  opacity: 0.75;
+}
+
+.classic-game:hover {
+  border: 2px solid white;
+  border-radius: 6px;
+  opacity: 1.0;
 }
 
 .advanced-game {
   margin-top: 10%;
   border: 2px solid white;
   border-radius: 6px;
+  opacity: 0.75;
 }
 
-.hover {
-  cursor: pointer;
+.advanced-game:hover {
+  margin-top: 10%;
+  border: 2px solid white;
+  border-radius: 6px;
+  opacity: 1.0;
 }
 
 .fighter-choices, .advanced-fighters {
